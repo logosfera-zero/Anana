@@ -23,6 +23,7 @@ namespace Cliente_FFMPEG
         string rutaFFMPEG;
         string rutaTEMPORAL;
         string rutaPLAY;
+        string lenguaje;
 
 
         public ayudanteConfiguracion()
@@ -33,6 +34,7 @@ namespace Cliente_FFMPEG
             this.rutaFFMPEG = ConfigurationManager.AppSettings["rutaFFMPEG"].ToString();
             this.rutaTEMPORAL = ConfigurationManager.AppSettings["rutaTEMPORAL"].ToString();
             this.rutaPLAY = ConfigurationManager.AppSettings["rutaPLAY"].ToString();
+            this.lenguaje = ConfigurationManager.AppSettings["lenguaje"].ToString();
 
             if (this.entorno == "audiovisual")
             {
@@ -136,6 +138,40 @@ namespace Cliente_FFMPEG
         }
 
 
+        public void setLenguaje(string lenguaje)
+        {
+
+            Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            configuration.AppSettings.Settings.Remove("lenguaje");
+            configuration.AppSettings.Settings.Add("lenguaje", lenguaje);
+            configuration.Save(ConfigurationSaveMode.Modified);
+            ConfigurationManager.RefreshSection("appSettings");
+        }
+
+        public void tildarOpcionMenuLenguajeCorrecta(string cambiarLenguajeA, ToolStripMenuItem espaniol, ToolStripMenuItem ingles)
+        {
+            if (!cambiarLenguajeA.Equals(""))
+            {
+                this.lenguaje = cambiarLenguajeA;
+                this.setLenguaje(cambiarLenguajeA);
+            }
+
+            switch (this.lenguaje)
+            {
+                case "es":
+                    espaniol.Checked = true;
+                    ingles.Checked = false;
+                    
+                    
+                    break;
+                case "en":
+                    espaniol.Checked = false;
+                    ingles.Checked = true;
+                    
+                    break;
+               
+            }
+        }
 
     }
 }

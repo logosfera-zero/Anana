@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Logos Consultoría")]
 [assembly: AssemblyProduct("Anana")]
-[assembly: AssemblyCopyright("Copyright © Ignacio Tula. 2018")]
+[assembly: AssemblyCopyright("Copyright © Ignacio Tula. 2019")]
 [assembly: AssemblyTrademark("Logos")]
 [assembly: AssemblyCulture("")]
 

@@ -26,10 +26,11 @@ namespace Cliente_FFMPEG
             
         //variables requeridas para cada ejecución del bucle
         String[] urlArchivo = archivo.Split('\\');
+        string escan = Tramite.esEntrelazado(archivo);
         ListViewGroup grupo = obtenerGrupoExistente(etiquetaMensajes, listaViewtrabajos, urlArchivo);
 
-        incorporarProcesosChequeadosDeArchivoEnCola("Video",chequeoVideo, listaViewtrabajos, archivo, grupo);
-        incorporarProcesosChequeadosDeArchivoEnCola("Audio",chequeoAudio, listaViewtrabajos, archivo, grupo);
+        incorporarProcesosChequeadosDeArchivoEnCola("Video",chequeoVideo, listaViewtrabajos, archivo, grupo, escan);
+        incorporarProcesosChequeadosDeArchivoEnCola("Audio",chequeoAudio, listaViewtrabajos, archivo, grupo, "N/A");
 
 
 
@@ -45,7 +46,7 @@ namespace Cliente_FFMPEG
          * Incorpora en la cola de procesamiento según archivo y grupo indicado, 
          * los procesos de la lista pasados. Generico para audio o video
          */
-        private static void incorporarProcesosChequeadosDeArchivoEnCola(String tipo,CheckedListBox lista, ListView listaViewtrabajos, String archivo, ListViewGroup grupoSeleccionado)
+        private static void incorporarProcesosChequeadosDeArchivoEnCola(String tipo,CheckedListBox lista, ListView listaViewtrabajos, String archivo, ListViewGroup grupoSeleccionado,string escan)
         {
 
             if (lista.CheckedItems != null)
@@ -57,10 +58,10 @@ namespace Cliente_FFMPEG
                     // de la lista de procesos
                     
 
-                    String[] fila = { archivo, tipo, procesoSelec };
+                    String[] fila = { archivo, tipo, procesoSelec,escan };
                     var listViewItem = new ListViewItem(fila, grupoSeleccionado);
                     listaViewtrabajos.Items.Insert(listaViewtrabajos.Items.Count, listViewItem);
-
+                    
                 }
             }
 
@@ -68,11 +69,12 @@ namespace Cliente_FFMPEG
             // Luego de crear los items de la cola de trabajo
             // se deseleccionan todos los procesos de audio y video
             // para dejar limpia la interface
+            /*
             for (int i = 0; i < lista.Items.Count; i++)
             {
                 lista.SetItemCheckState(i, CheckState.Unchecked);
             }
-
+            */
 
 
         }
@@ -98,10 +100,10 @@ namespace Cliente_FFMPEG
             // Se recorre cada grupo existente en la lista de trabajos
             // para encontrar si el archivo actual pertenece a un grupo
             // que ya exista (distintos procesamientos para el mismo archivo)
-            for (int i = 0; i < listaViewtrabajos.Groups.Count; i++)
+            for (int i = 0; i< listaViewtrabajos.Groups.Count ; i++)
             {
 
-                if (listaViewtrabajos.Groups[i].Header == urlArchivo[ultimoSegmento])
+                if (listaViewtrabajos.Groups[i].Header.ToString().Equals(urlArchivo[ultimoSegmento]))
                 {
                     elGrupoYaExiste = i;
                     etiquetaMensajes.Text = "Agregando " + urlArchivo[ultimoSegmento].ToString() + " al grupo existente: " + elGrupoYaExiste.ToString();
@@ -117,7 +119,8 @@ namespace Cliente_FFMPEG
                 listaViewtrabajos.Groups.Add(nuevoGrupo);
 
 
-                etiquetaMensajes.Text = "Agregando " + urlArchivo[ultimoSegmento].ToString() + " a un nuevo grupo";
+                etiquetaMensajes.Text = "Agregando " + urlArchivo[ultimoSegmento].ToString() + " a un nuevo grupo con id " + listaViewtrabajos.Groups.IndexOf(nuevoGrupo);
+                Console.WriteLine("Agregando " + urlArchivo[ultimoSegmento].ToString() + " a un nuevo grupo con id " + listaViewtrabajos.Groups.IndexOf(nuevoGrupo));
                 elGrupoYaExiste = listaViewtrabajos.Groups.IndexOf(nuevoGrupo);
                 return listaViewtrabajos.Groups[elGrupoYaExiste];
                     

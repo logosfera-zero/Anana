@@ -9,27 +9,32 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Diagnostics;
+using System.IO;
+using ANANA.Properties;
+using System.Diagnostics;
 
 using ANANA.Properties;
+using System.Threading;
 
 namespace Cliente_FFMPEG
 {
     class Tramite
     {
 
-        public static void ejecutar (String argumento, String rutaArchivo, Label etiquetaMensajes, ProgressBar barraDeProgreso)
+        public static bool ejecutar(String argumento, String rutaArchivo, Label etiquetaMensajes, ProgressBar barraDeProgreso)
         {
             String rutaFFMPEG = ConfigurationManager.AppSettings["rutaFFMPEG"].ToString();
             String rutaEXIF = ConfigurationManager.AppSettings["rutaEXIF"].ToString();
-            String[] frame ;
+            String[] frame;
             int frameActual = 0;
             int frameTotal = 0;
-
-
+            Boolean terminamos = false;
+            int contadorEstupido = 0;
 
 
 
             Process procprobe = new System.Diagnostics.Process();
+
 
             procprobe.StartInfo.FileName = rutaEXIF;
             procprobe.EnableRaisingEvents = true;
@@ -44,25 +49,28 @@ namespace Cliente_FFMPEG
             procprobe.StartInfo.UserName = "";
             procprobe.StartInfo.UseShellExecute = false;
             procprobe.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-            procprobe.StartInfo.WorkingDirectory = "C:\\DMAOPS\\TRABAJOS";
-           // procprobe.StartInfo.Arguments = "-v error -count_frames -select_streams v:0 -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 \"" + rutaArchivo + "\"";
+            procprobe.StartInfo.WorkingDirectory = "C:\\LOGOS\\TRABAJOS";
+            // procprobe.StartInfo.Arguments = "-v error -count_frames -select_streams v:0 -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 \"" + rutaArchivo + "\"";
             procprobe.StartInfo.Arguments = "-MediaDuration \"" + rutaArchivo + "\"";
             Console.WriteLine(procprobe.StartInfo.Arguments);
+
+
             procprobe.OutputDataReceived += new DataReceivedEventHandler(
             (s, e) =>
             {
                 if (frameTotal == 0)
                 {
-                    try { 
-                    String[] duracion_raw = e.Data.Substring(34).Split(':');
-                    int fps = Tramite.obtenerFPS(rutaArchivo);
-                    Console.WriteLine("#### que corno es el tiempo");
-                    Console.WriteLine(duracion_raw[0]);
-                    Console.WriteLine(duracion_raw[1]);
-                    Console.WriteLine(duracion_raw[2]);
-                    int segundos = Int32.Parse(duracion_raw[0]) * 3600 + Int32.Parse(duracion_raw[1]) * 60 + Int32.Parse(duracion_raw[2]);
-                    frameTotal = segundos * fps + 1;
-                    Console.WriteLine("##### El frametotal es: " + frameTotal.ToString());
+                    try
+                    {
+                        String[] duracion_raw = e.Data.Substring(34).Split(':');
+                        int fps = Tramite.obtenerFPS(rutaArchivo);
+                        Console.WriteLine("#### que corno es el tiempo");
+                        Console.WriteLine(duracion_raw[0]);
+                        Console.WriteLine(duracion_raw[1]);
+                        Console.WriteLine(duracion_raw[2]);
+                        int segundos = Int32.Parse(duracion_raw[0]) * 3600 + Int32.Parse(duracion_raw[1]) * 60 + Int32.Parse(duracion_raw[2]);
+                        frameTotal = segundos * fps + 1;
+                        Console.WriteLine("##### El frametotal es: " + frameTotal.ToString());
                     }
                     catch (Exception)
                     {
@@ -73,16 +81,19 @@ namespace Cliente_FFMPEG
         );
 
 
-          
+
+
+
             procprobe.Start();
             procprobe.BeginOutputReadLine();
-            procprobe.BeginErrorReadLine();
+            // procprobe.BeginErrorReadLine();
             procprobe.WaitForExit();
             procprobe.Close();
             procprobe.Dispose();
+
+
+
             
-
-
             Process procesador = new System.Diagnostics.Process();
             procesador.StartInfo.FileName = rutaFFMPEG;
             procesador.StartInfo.Arguments = argumento;
@@ -98,16 +109,18 @@ namespace Cliente_FFMPEG
             procesador.StartInfo.UserName = "";
             procesador.StartInfo.UseShellExecute = false;
             procesador.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-            procesador.StartInfo.WorkingDirectory = "C:\\DMAOPS\\TRABAJOS";
+            procesador.StartInfo.WorkingDirectory = "C:\\LOGOS\\TRABAJOS";
 
 
 
 
-           
+
             procesador.OutputDataReceived += new DataReceivedEventHandler(
             (s, a) =>
             {
                 etiquetaMensajes.Text = a.Data;
+                Console.WriteLine(a.Data);
+
                 if (a.Data != null)
                 {
                     if (a.Data.ToString().Length > 6)
@@ -123,7 +136,7 @@ namespace Cliente_FFMPEG
                             }
                             catch (Exception)
                             {
-                                Console.WriteLine("No se pudo obtener el frame actual");
+                                // Console.WriteLine("No se pudo obtener el frame actual");
                             }
 
 
@@ -133,13 +146,13 @@ namespace Cliente_FFMPEG
             }
         );
 
-            
+
             procesador.ErrorDataReceived += new DataReceivedEventHandler(
             (s, a) =>
             {
 
-               etiquetaMensajes.Text = a.Data;
-
+                etiquetaMensajes.Text = a.Data;
+                // Console.WriteLine(a.Data);
                 try
                 {
                     frame = a.Data.Split('=');
@@ -149,36 +162,38 @@ namespace Cliente_FFMPEG
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine("No se pudo obtener el frame actual");
+                    // Console.WriteLine("No se pudo obtener el frame actual");
                 }
 
-               
 
-                
+
+
 
 
             }
         );
+
             
-           
-               
 
-
+            
 
             procesador.Start();
+
             procesador.BeginOutputReadLine();
             procesador.BeginErrorReadLine();
             procesador.WaitForExit();
+
             procesador.Close();
             procesador.Dispose();
 
+            return true;
 
             //  Console.WriteLine(rutaFFMPEG + " " + argumento);
 
         }
 
 
-    public static void limpiarTemporales()
+        public static void limpiarTemporales()
         {
             String rutaTEMPORAL = ConfigurationManager.AppSettings["rutaTEMPORAL"].ToString();
             Process borrador = new System.Diagnostics.Process();
@@ -196,10 +211,10 @@ namespace Cliente_FFMPEG
             borrador.StartInfo.UserName = "";
             borrador.StartInfo.UseShellExecute = false;
             borrador.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-            borrador.StartInfo.WorkingDirectory = "C:\\DMAOPS\\TRABAJOS";
+            borrador.StartInfo.WorkingDirectory = "C:\\LOGOS\\TRABAJOS";
             borrador.StartInfo.Arguments = "/c del /Q " + rutaTEMPORAL;
             Console.WriteLine(borrador.StartInfo.Arguments);
-            
+
 
             borrador.Start();
             borrador.BeginOutputReadLine();
@@ -231,7 +246,7 @@ namespace Cliente_FFMPEG
             borrador.StartInfo.UserName = "";
             borrador.StartInfo.UseShellExecute = false;
             borrador.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-            borrador.StartInfo.WorkingDirectory = "C:\\DMAOPS\\TRABAJOS";
+            borrador.StartInfo.WorkingDirectory = "C:\\LOGOS\\TRABAJOS";
             borrador.StartInfo.Arguments = "-VideoFrameRate \"" + rutaArchivo + "\"";
             Console.WriteLine(borrador.StartInfo.Arguments);
 
@@ -241,7 +256,7 @@ namespace Cliente_FFMPEG
             borrador.OutputDataReceived += new DataReceivedEventHandler(
             (s, e) =>
             {
-               
+
                 if (framerate == 0)
                 {
                     try
@@ -254,15 +269,11 @@ namespace Cliente_FFMPEG
                         Console.WriteLine("No se pudo obtener el frame rate" + e.Data);
                     }
                 }
-                            
-                           
 
 
-                        }
-                    
-                
-            
-        );
+
+
+            });
 
 
             borrador.ErrorDataReceived += new DataReceivedEventHandler(
@@ -283,15 +294,7 @@ namespace Cliente_FFMPEG
                     }
                 }
 
-            }
-
-
-
-
-
-
-            
-        );
+            });
 
 
 
@@ -307,5 +310,199 @@ namespace Cliente_FFMPEG
             return framerate;
 
         }
+
+
+
+        public static string esEntrelazado(string rutaArchivo)
+        {
+
+            string respuesta = "";
+
+            string rutaMEDIAINFO = ConfigurationManager.AppSettings["rutaMEDIAINFO"].ToString();
+            Process borrador = new System.Diagnostics.Process();
+
+
+            borrador.StartInfo.FileName = rutaMEDIAINFO;
+            borrador.EnableRaisingEvents = false;
+            borrador.StartInfo.CreateNoWindow = true;
+            borrador.StartInfo.Domain = "";
+            borrador.StartInfo.LoadUserProfile = false;
+            borrador.StartInfo.Password = null;
+            borrador.StartInfo.RedirectStandardError = true;
+            borrador.StartInfo.RedirectStandardOutput = true;
+            borrador.StartInfo.StandardErrorEncoding = null;
+            borrador.StartInfo.StandardOutputEncoding = null;
+            borrador.StartInfo.UserName = "";
+            borrador.StartInfo.UseShellExecute = false;
+            borrador.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            borrador.StartInfo.WorkingDirectory = "C:\\LOGOS\\TRABAJOS";
+            borrador.StartInfo.Arguments = "--Output=\"Video;%ScanType%\" \"" + rutaArchivo + "\"";
+            Console.WriteLine(borrador.StartInfo.Arguments);
+
+
+            borrador.OutputDataReceived += new DataReceivedEventHandler(
+                (s, e) =>
+                {
+
+
+                    try
+                    {
+                        respuesta = e.Data.ToString();
+
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("No se pudo obtener el tipo de escaneo de campo [NADA]");
+                    }
+
+
+
+
+
+                });
+
+
+            borrador.ErrorDataReceived += new DataReceivedEventHandler(
+            (s, e) =>
+            {
+
+
+
+                try
+                {
+                    respuesta = e.Data.ToString();
+
+                }
+                catch (Exception)
+                {
+                  //  Console.WriteLine("No se pudo obtener el tipo de escaneo de campo [" + e.Data + "]");
+                }
+
+
+            });
+
+
+
+
+
+
+            borrador.Start();
+            borrador.BeginOutputReadLine();
+            //borrador.BeginErrorReadLine();
+            borrador.WaitForExit();
+            borrador.Close();
+            borrador.Dispose();
+
+            if (respuesta.Equals("Interlaced"))
+            {
+                Console.WriteLine(rutaArchivo + " Es entrelazado");
+                return "Entrelazado";
+            }
+            else
+            {
+                Console.WriteLine(rutaArchivo + " Es progresivo");
+                return "Progresivo";
+            }
+
+
+
+
+
+        }
+
+
+
+
+
+
+        public static int duracion(string rutaArchivo)
+        {
+
+            string respuesta = "";
+
+            string rutaMEDIAINFO = ConfigurationManager.AppSettings["rutaMEDIAINFO"].ToString();
+            Process borrador = new System.Diagnostics.Process();
+
+
+            borrador.StartInfo.FileName = rutaMEDIAINFO;
+            borrador.EnableRaisingEvents = false;
+            borrador.StartInfo.CreateNoWindow = true;
+            borrador.StartInfo.Domain = "";
+            borrador.StartInfo.LoadUserProfile = false;
+            borrador.StartInfo.Password = null;
+            borrador.StartInfo.RedirectStandardError = true;
+            borrador.StartInfo.RedirectStandardOutput = true;
+            borrador.StartInfo.StandardErrorEncoding = null;
+            borrador.StartInfo.StandardOutputEncoding = null;
+            borrador.StartInfo.UserName = "";
+            borrador.StartInfo.UseShellExecute = false;
+            borrador.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            borrador.StartInfo.WorkingDirectory = "C:\\LOGOS\\TRABAJOS";
+            borrador.StartInfo.Arguments = "--Output=\"Video;%Duration%\" \"" + rutaArchivo + "\"";
+            Console.WriteLine(borrador.StartInfo.Arguments);
+
+
+            borrador.OutputDataReceived += new DataReceivedEventHandler(
+                (s, e) =>
+                {
+
+
+                    try
+                    {
+                        respuesta = e.Data.ToString();
+
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("No se pudo obtener el tipo de escaneo de campo [NADA]");
+                    }
+
+
+
+
+
+                });
+
+
+            borrador.ErrorDataReceived += new DataReceivedEventHandler(
+            (s, e) =>
+            {
+
+
+
+                try
+                {
+                    respuesta = e.Data.ToString();
+
+                }
+                catch (Exception)
+                {
+                    //  Console.WriteLine("No se pudo obtener el tipo de escaneo de campo [" + e.Data + "]");
+                }
+
+
+            });
+
+
+
+
+
+
+            borrador.Start();
+            borrador.BeginOutputReadLine();
+            //borrador.BeginErrorReadLine();
+            borrador.WaitForExit();
+            borrador.Close();
+            borrador.Dispose();
+
+
+            return Int32.Parse(respuesta);
+
+
+
+
+        }
+
+     
     }
 }

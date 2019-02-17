@@ -117,19 +117,138 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="openFileDialogo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>214, 17</value>
-  </metadata>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>382, 17</value>
-  </metadata>
-  <metadata name="folderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>517, 17</value>
-  </metadata>
+  <data name="&gt;&gt;openFileDialogo.Name" xml:space="preserve">
+    <value>openFileDialogo</value>
+  </data>
+  <data name="chequeoAudio.Items1" xml:space="preserve">
+    <value>MP3 en Calidad Alta</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="etiquetaMensajes.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7.8pt, style=Bold</value>
+  </data>
+  <data name="botonComenzar.Text" xml:space="preserve">
+    <value>Comenzar</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>867, 454</value>
+  </data>
+  <data name="chequeoVideo.Items19" xml:space="preserve">
+    <value>Para resguardo en Archivo Histórico (H264 25Mbits)</value>
+  </data>
+  <data name="&gt;&gt;columnaArchivo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="chequeoVideo.Items2" xml:space="preserve">
+    <value>Para publicar en Facebook (H264 1080p 8Mbits)</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="chequeoVideo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>507, 102</value>
+  </data>
+  <data name="&gt;&gt;chequeoAudio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;botonComenzar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="idiomaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 26</value>
+  </data>
+  <data name="&gt;&gt;hardwareNvidiaNvencToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="chequeoVideo.Items12" xml:space="preserve">
+    <value>Superponiendo mosca y para enviar por Whatsapp - Telegram (720p máximo de 64MB)</value>
+  </data>
+  <data name="listaViewtrabajos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1386, 28</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="listaViewtrabajos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 21</value>
+  </data>
+  <data name="&gt;&gt;hardwareAMDATIVCEToolStripMenuItem.Name" xml:space="preserve">
+    <value>hardwareAMDATIVCEToolStripMenuItem</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="botonQuitar.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="carpetaDeExportaciónToolStripMenuItem.Text" xml:space="preserve">
+    <value>Carpeta de Exportación</value>
+  </data>
+  <data name="etiquetaMensajes.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="chequeoAudio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 22</value>
+  </data>
+  <data name="codificadorDeVideoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Codificador de Video</value>
+  </data>
+  <data name="&gt;&gt;listaViewtrabajos.Name" xml:space="preserve">
+    <value>listaViewtrabajos</value>
+  </data>
+  <data name="barraDeProgreso.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="etiquetaMensajes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 17</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ANANA (Asistente Normalizador Audiovisual Nada Abrupto)</value>
+  </data>
+  <data name="etiquetaMensajes.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;listaViewtrabajos.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;etiquetaMensajes.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chequeoAudio.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="botonQuitar.Text" xml:space="preserve">
+    <value>Quitar</value>
+  </data>
+  <data name="chequeoVideo.Items13" xml:space="preserve">
+    <value>Para mostrar a un tercero (Marca de Agua)</value>
+  </data>
+  <data name="&gt;&gt;chequeoVideo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="columnaParametro.Width" type="System.Int32, mscorlib">
+    <value>483</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="chequeoAudio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>491, 72</value>
+  </data>
+  <data name="&gt;&gt;chequeoAudio.Name" xml:space="preserve">
+    <value>chequeoAudio</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAABMLAAATCwAAAAAAAAAA
@@ -206,4 +325,535 @@
         Af//IAH//+AB///wB///8J////z////8//8=
 </value>
   </data>
+  <data name="chequeoVideo.Items10" xml:space="preserve">
+    <value>Superponiendo mosca y para publicar en Twitter  (frag. subclips 137segs, H264 720 2Mbits)</value>
+  </data>
+  <data name="&gt;&gt;carpetaDeExportaciónToolStripMenuItem.Name" xml:space="preserve">
+    <value>carpetaDeExportaciónToolStripMenuItem</value>
+  </data>
+  <data name="softwareX264ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Software (X264)</value>
+  </data>
+  <data name="listaViewtrabajos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>836, 483</value>
+  </data>
+  <data name="hardwareAMDATIVCEToolStripMenuItem.Text" xml:space="preserve">
+    <value>Hardware AMD/ATI  (VCE)</value>
+  </data>
+  <data name="&gt;&gt;columnScan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="chequeoVideo.Items3" xml:space="preserve">
+    <value>Para publicar en Twitter  (frag. subclips 137segs, H264 720 2Mbits)</value>
+  </data>
+  <data name="configuraciónToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 24</value>
+  </data>
+  <data name="guardarColaDeTrabajoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Guardar Cola de Trabajo</value>
+  </data>
+  <data name="&gt;&gt;codificadorDeVideoToolStripMenuItem.Name" xml:space="preserve">
+    <value>codificadorDeVideoToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;folderBrowserDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="openFileDialogo.Filter" xml:space="preserve">
+    <value>Videos de UNITV | *.mp4; *.mov; *.mxf; *.avi; *.mpg ; *.mpeg ; *.ts ; *.h264; *.mkv; *.webm; *.divx</value>
+  </data>
+  <data name="codificadorDeVideoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 26</value>
+  </data>
+  <data name="chequeoVideo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="chequeoVideo.Items6" xml:space="preserve">
+    <value>Para enviar por Whatsapp - Telegram (720p máximo de 64MB)</value>
+  </data>
+  <data name="&gt;&gt;idiomaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;etiquetaMensajes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="chequeoAudio.Items" xml:space="preserve">
+    <value>MP3 en Calidad Liviana</value>
+  </data>
+  <data name="&gt;&gt;backgroundWorker1.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="botonQuitar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 46</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="chequeoVideo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 21</value>
+  </data>
+  <data name="columnaParametro.Text" xml:space="preserve">
+    <value>Parámetro</value>
+  </data>
+  <data name="chequeoVideo.Items" xml:space="preserve">
+    <value>Para publicar en OnDemand (H264 1080p 18Mbits)</value>
+  </data>
+  <data name="botonComenzar.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;botonComenzar.Name" xml:space="preserve">
+    <value>botonComenzar</value>
+  </data>
+  <data name="&gt;&gt;chequeoVideo.Name" xml:space="preserve">
+    <value>chequeoVideo</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;hardwareNvidiaNvencToolStripMenuItem.Name" xml:space="preserve">
+    <value>hardwareNvidiaNvencToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;abrirColaDeTrabajoToolStripMenuItem.Name" xml:space="preserve">
+    <value>abrirColaDeTrabajoToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="hardwareAMDATIVCEToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 26</value>
+  </data>
+  <data name="botonComenzar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 46</value>
+  </data>
+  <data name="&gt;&gt;columnaOperacion.Name" xml:space="preserve">
+    <value>columnaOperacion</value>
+  </data>
+  <data name="botonAgregar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;chequeoVideo.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="botonQuitar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;botonAgregar.Name" xml:space="preserve">
+    <value>botonAgregar</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="abrirColaDeTrabajoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Abrir Cola de Trabajo</value>
+  </data>
+  <data name="&gt;&gt;botonAgregar.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="groupBox3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;listaViewtrabajos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Convertir a Sonido</value>
+  </data>
+  <data name="softwareX264ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 26</value>
+  </data>
+  <data name="chequeoVideo.Items1" xml:space="preserve">
+    <value>Para publicar en Youtube  (H264 1080p 15Mbits)</value>
+  </data>
+  <data name="salirToolStripMenuItem.Text" xml:space="preserve">
+    <value>Salir</value>
+  </data>
+  <data name="&gt;&gt;columnaParametro.Name" xml:space="preserve">
+    <value>columnaParametro</value>
+  </data>
+  <data name="&gt;&gt;archivoToolStripMenuItem.Name" xml:space="preserve">
+    <value>archivoToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;columnaOperacion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnaParametro.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;etiquetaMensajes.Name" xml:space="preserve">
+    <value>etiquetaMensajes</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="chequeoVideo.Items4" xml:space="preserve">
+    <value>Para publicar en IGTV (transpone a 9:16)</value>
+  </data>
+  <data name="barraDeProgreso.Location" type="System.Drawing.Point, System.Drawing">
+    <value>866, 560</value>
+  </data>
+  <data name="&gt;&gt;guardarColaDeTrabajoToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;botonComenzar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="columnaOperacion.Text" xml:space="preserve">
+    <value>Operación</value>
+  </data>
+  <data name="chequeoAudio.Items3" xml:space="preserve">
+    <value>WAV para edición (44.1Khz)</value>
+  </data>
+  <data name="chequeoVideo.Items15" xml:space="preserve">
+    <value>Para editar en una PC de Producción (H264)</value>
+  </data>
+  <data name="&gt;&gt;botonComenzar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;folderBrowserDialog1.Name" xml:space="preserve">
+    <value>folderBrowserDialog1</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 44</value>
+  </data>
+  <data name="&gt;&gt;botonAgregar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="columnaOperacion.Width" type="System.Int32, mscorlib">
+    <value>116</value>
+  </data>
+  <data name="chequeoVideo.Items7" xml:space="preserve">
+    <value>Superponiendo mosca y para publicar en OnDemand (H264 1080p 18Mbits)</value>
+  </data>
+  <data name="&gt;&gt;botonAgregar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;salirToolStripMenuItem.Name" xml:space="preserve">
+    <value>salirToolStripMenuItem</value>
+  </data>
+  <data name="botonQuitar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>169, 560</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="españolToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="botonAgregar.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;salirToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="archivoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Archivo</value>
+  </data>
+  <data name="&gt;&gt;archivoToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="etiquetaMensajes.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="hardwareNvidiaNvencToolStripMenuItem.Text" xml:space="preserve">
+    <value>Hardware Nvidia (Nvenc)</value>
+  </data>
+  <data name="menuStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 2, 0, 2</value>
+  </data>
+  <data name="archivoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 24</value>
+  </data>
+  <data name="&gt;&gt;etiquetaMensajes.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;barraDeProgreso.Name" xml:space="preserve">
+    <value>barraDeProgreso</value>
+  </data>
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;chequeoVideo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;españolToolStripMenuItem.Name" xml:space="preserve">
+    <value>españolToolStripMenuItem</value>
+  </data>
+  <data name="botonComenzar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>614, 560</value>
+  </data>
+  <data name="groupBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;configuraciónToolStripMenuItem.Name" xml:space="preserve">
+    <value>configuraciónToolStripMenuItem</value>
+  </data>
+  <data name="columnaArchivo.Width" type="System.Int32, mscorlib">
+    <value>223</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="chequeoVideo.Items8" xml:space="preserve">
+    <value>Superponiendo mosca y para publicar en Youtube  (H264 1080p 15Mbits)</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;codificadorDeVideoToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;configuraciónToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="barraDeProgreso.Size" type="System.Drawing.Size, System.Drawing">
+    <value>507, 46</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Convertir a Video</value>
+  </data>
+  <data name="botonAgregar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 46</value>
+  </data>
+  <data name="groupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="chequeoVideo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>491, 378</value>
+  </data>
+  <data name="groupBox2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="groupBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;hardwareIntelQuickSyncToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="chequeoVideo.Items5" xml:space="preserve">
+    <value>Para publicar en Instagram (frag. subclips 57segs, 720p 1Mbps)</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="barraDeProgreso.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;openFileDialogo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="chequeoAudio.Items2" xml:space="preserve">
+    <value>WAV para edición (48.0Khz)</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>867, 44</value>
+  </data>
+  <data name="abrirColaDeTrabajoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 26</value>
+  </data>
+  <data name="botonComenzar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="groupBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;barraDeProgreso.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnScan.Name" xml:space="preserve">
+    <value>columnScan</value>
+  </data>
+  <data name="&gt;&gt;botonQuitar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;botonQuitar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="chequeoVideo.Items11" xml:space="preserve">
+    <value>Superponiendo mosca y para publicar en IGTV (transpone a 9:16)</value>
+  </data>
+  <data name="botonAgregar.Text" xml:space="preserve">
+    <value>Agregar</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="etiquetaMensajes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 608</value>
+  </data>
+  <data name="chequeoVideo.Items16" xml:space="preserve">
+    <value>Flujo de Transporte de Video (MPEG2-TS)</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;backgroundWorker1.Name" xml:space="preserve">
+    <value>backgroundWorker1</value>
+  </data>
+  <data name="&gt;&gt;botonQuitar.Name" xml:space="preserve">
+    <value>botonQuitar</value>
+  </data>
+  <data name="&gt;&gt;hardwareIntelQuickSyncToolStripMenuItem.Name" xml:space="preserve">
+    <value>hardwareIntelQuickSyncToolStripMenuItem</value>
+  </data>
+  <data name="chequeoAudio.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="hardwareIntelQuickSyncToolStripMenuItem.Text" xml:space="preserve">
+    <value>Hardware Intel (QuickSync)</value>
+  </data>
+  <data name="&gt;&gt;guardarColaDeTrabajoToolStripMenuItem.Name" xml:space="preserve">
+    <value>guardarColaDeTrabajoToolStripMenuItem</value>
+  </data>
+  <data name="carpetaDeExportaciónToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 26</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Listado de Archivos</value>
+  </data>
+  <data name="&gt;&gt;columnaArchivo.Name" xml:space="preserve">
+    <value>columnaArchivo</value>
+  </data>
+  <data name="columnaArchivo.Text" xml:space="preserve">
+    <value>Archivo</value>
+  </data>
+  <data name="&gt;&gt;chequeoAudio.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;softwareX264ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>848, 512</value>
+  </data>
+  <data name="&gt;&gt;chequeoAudio.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;listaViewtrabajos.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chequeoVideo.Items18" xml:space="preserve">
+    <value>Bajar resolución a PAL (720x576 MPEG2)</value>
+  </data>
+  <data name="&gt;&gt;abrirColaDeTrabajoToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;idiomaToolStripMenuItem.Name" xml:space="preserve">
+    <value>idiomaToolStripMenuItem</value>
+  </data>
+  <data name="chequeoVideo.HorizontalScrollbar" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;softwareX264ToolStripMenuItem.Name" xml:space="preserve">
+    <value>softwareX264ToolStripMenuItem</value>
+  </data>
+  <data name="inglesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="listaViewtrabajos.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;hardwareAMDATIVCEToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="hardwareIntelQuickSyncToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 26</value>
+  </data>
+  <data name="chequeoVideo.Items9" xml:space="preserve">
+    <value>Superponiendo mosca y para publicar en Facebook (H264 1080p 8Mbits)</value>
+  </data>
+  <data name="&gt;&gt;carpetaDeExportaciónToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="salirToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 26</value>
+  </data>
+  <data name="&gt;&gt;inglesToolStripMenuItem.Name" xml:space="preserve">
+    <value>inglesToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;barraDeProgreso.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1386, 630</value>
+  </data>
+  <data name="configuraciónToolStripMenuItem.Text" xml:space="preserve">
+    <value>Configuración</value>
+  </data>
+  <data name="&gt;&gt;botonQuitar.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="chequeoVideo.Items17" xml:space="preserve">
+    <value>Bajar resolución a SD (853x480)</value>
+  </data>
+  <data name="guardarColaDeTrabajoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 26</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>508, 406</value>
+  </data>
+  <data name="&gt;&gt;españolToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="botonAgregar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 560</value>
+  </data>
+  <data name="chequeoVideo.Items14" xml:space="preserve">
+    <value>Para editar en Isla de Edición (DNxHD)</value>
+  </data>
+  <data name="&gt;&gt;inglesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;barraDeProgreso.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="hardwareNvidiaNvencToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 26</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>es</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
+  <metadata name="openFileDialogo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>214, 17</value>
+  </metadata>
+  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>382, 17</value>
+  </metadata>
+  <metadata name="folderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>517, 17</value>
+  </metadata>
 </root>
